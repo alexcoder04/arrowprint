@@ -1,4 +1,4 @@
-package main
+package arrowprint
 
 import "fmt"
 
