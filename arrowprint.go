@@ -3,11 +3,11 @@ package arrowprint
 import "fmt"
 
 func printColor0(cc int, msg string) {
-	fmt.Printf("\033[3%dm==> %s\n", cc, msg)
+	fmt.Printf("\033[3%dm==>\033[0m %s\n", cc, msg)
 }
 
 func printColor1(cc int, msg string) {
-	fmt.Printf("\033[3%dm  -> %s\n", cc, msg)
+	fmt.Printf("\033[3%dm  ->\033[0m %s\n", cc, msg)
 }
 
 func Suc0(msg string) {
