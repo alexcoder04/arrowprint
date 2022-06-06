@@ -22,6 +22,10 @@ func Err0(msg string, args ...interface{}) {
 	printColor0(1, msg, args...)
 }
 
+func Info0(msg string, args ...interface{}) {
+	printColor0(4, msg, args...)
+}
+
 func Suc1(msg string, args ...interface{}) {
 	printColor1(2, msg, args...)
 }
@@ -32,4 +36,8 @@ func Warn1(msg string, args ...interface{}) {
 
 func Err1(msg string, args ...interface{}) {
 	printColor1(1, msg, args...)
+}
+
+func Info1(msg string, args ...interface{}) {
+	printColor1(4, msg, args...)
 }
