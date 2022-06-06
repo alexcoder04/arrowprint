@@ -1,18 +1,34 @@
 package arrowprint
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/mattn/go-colorable"
+)
 
 // helper functions
 func printColor0(cc int, msg string, args ...interface{}) {
-	fmt.Printf("\033[3%dm==>\033[0m %s\n", cc, fmt.Sprintf(msg, args...))
+	fmt.Fprintf(
+		colorable.NewColorableStdout(),
+		"\033[3%dm==>\033[0m %s\n",
+		cc,
+		fmt.Sprintf(msg, args...))
 }
 
 func printColor1(cc int, msg string, args ...interface{}) {
-	fmt.Printf("\033[3%dm  ->\033[0m %s\n", cc, fmt.Sprintf(msg, args...))
+	fmt.Fprintf(
+		colorable.NewColorableStdout(),
+		"\033[3%dm  ->\033[0m %s\n",
+		cc,
+		fmt.Sprintf(msg, args...))
 }
 
 func printColon(cc int, msg string, args ...interface{}) {
-	fmt.Printf("\033[3%d;1m ::\033[0m\033[1m %s\033[0m\n", cc, fmt.Sprintf(msg, args...))
+	fmt.Fprintf(
+		colorable.NewColorableStdout(),
+		"\033[3%d;1m ::\033[0m\033[1m %s\033[0m\n",
+		cc,
+		fmt.Sprintf(msg, args...))
 }
 
 // colon print
